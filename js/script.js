@@ -1,18 +1,11 @@
-/*$(function () {
-  // $("ul ul:first").append("<li>I'm gonna be the last sub-item</li>");
-  //$(".red-box").after("<div class='red-box'>Another Red</div>")
-  /*$(".blue-box").before(function() {
-      return "<div class='blue-box'>Blue 2</div>";
-  });
-  // $("p").after($("#list"));
-
-
-});*/
-
 $(function () {
-  $(".red-box").after("<div class='red-box'>Red</div>");
+  // $("li").replaceWith("<li>Replaced.</li>");
+  /*$("li").replaceWith(function () {
+    return "<li>Replaced with function</li>";
+  }); */
 
-  $(".green-box").after("<div class='green-box'>Green</div>");
+  // var firstListItem = $("li:first");
+  // $("p").replaceWith(firstListItem);
 
-  $(".blue-box").after("<div class='blue-box'>Blue</div>");
+  $(".red-box, .blue-box").replaceWith("<div class = 'green-box'>Green</div>");
 });
