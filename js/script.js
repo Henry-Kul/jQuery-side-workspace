@@ -1,11 +1,9 @@
 $(function () {
-  // $("#list").find("li").filter(":even").css("background-color", "rgba(180, 180, 30, 0.8)");
-  // $("li")
-  //  .filter(function (index) {
-  //   return index % 3 === 1;
-  //  })
-  //  .css("background-color", "rgba(180, 180, 30, 0.8)");
-  //  $("li").first().css("background-color", "rgba(180, 180, 30, 0.8)");
-  // $("li").eq(-2).css("background-color", "rgba(180, 180, 30, 0.8)");
-  $("li").not("#list ul li").css("background-color", "rgba(180, 180, 30, 0.8)");
+  // $("ul ul:first").append("<li>I'm gonna be the last sub-item</li>");
+  //$(".red-box").after("<div class='red-box'>Another Red</div>")
+
+  /*$(".blue-box").before(function() {
+      return "<div class='blue-box'>Blue 2</div>";
+  });*/
+  $("p").after($("#list"));
 });
