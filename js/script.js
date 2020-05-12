@@ -1,11 +1,12 @@
 $(function () {
-  // $("li").replaceWith("<li>Replaced.</li>");
-  /*$("li").replaceWith(function () {
-    return "<li>Replaced with function</li>";
-  }); */
+  // $("li").remove();
+  //$("form").children().not("input:text, textarea, br").remove();
 
-  // var firstListItem = $("li:first");
-  // $("p").replaceWith(firstListItem);
+  /*var detachedListItem = $("li").detach();
+  $("#content").append(detachedListItem);*/
 
-  $(".red-box, .blue-box").replaceWith("<div class = 'green-box'>Green</div>");
+
+  // $("p:first").empty();
+
+  $(".red-box, .green-box, .blue-box").empty();
 });
