@@ -1,12 +1,18 @@
 $(function () {
-  // $("li").remove();
-  //$("form").children().not("input:text, textarea, br").remove();
+  // attr(), prop(), val()
+  /*var specialLink = $("#special-link");
+  console.log(specialLink.attr("href"));
+  console.log(specialLink.attr("title"));
 
-  /*var detachedListItem = $("li").detach();
-  $("#content").append(detachedListItem);*/
+  specialLink.attr("href", "http://petersommerhoff.com"); */
 
+  /* var checkbox = $("input:checkbox");
+    console.log(checkbox.prop("checked")); */
 
-  // $("p:first").empty();
+  var textInput = $("input:text");
+  textInput.val("Peter Sommerhoff");
+  console.log(textInput.val());
 
-  $(".red-box, .green-box, .blue-box").empty();
+  var rangeInput = $("input[type='range']");
+  console.log(rangeInput.val());
 });
