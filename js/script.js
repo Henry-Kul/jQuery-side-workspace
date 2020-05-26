@@ -1,26 +1,19 @@
 $(function () {
-  //.on("click", function() {. . .})
-  function logEvent() {
-    console.log("Mouse was clicked or key was pressed");
-  }
+  /*  $("p").click(function() {
+      $(this).slideUp();
+  });
+  $("#content").append("<p>This is a dynamically added paragraph.</p>");
+*/
+  //delegated events
 
-  $("html").on("click keydown", logEvent);
+  $("#content").on("click", "p", function () {
+    $(this).slideUp();
+  });
+  $("#content").append("<p>This is a dynamically added paragraph.</p>");
 
-  var images = [
-    "images/laptop-mobile_small.jpg",
-    "images/laptop-on-table_small.jpg",
-    "images/people-office-group-team_small.jpg",
-  ];
+  // mini-challenge mouseenter on body that delegates on li to change font color
 
-  var galleryImage = $(".gallery").find("img");
-  galleryImage.on("click", imageLoop);
-
-  var i = 0;
-
-  function imageLoop() {
-        i = (i + 1) % images.length;
-      $(galleryImage).fadeOut(function () {
-        $(galleryImage).attr("src", images[i]).fadeIn();
-    });
-  }
+  $("body").on("mouseenter", "li", function () {
+    $(this).css("color", "blue");
+  });
 });
