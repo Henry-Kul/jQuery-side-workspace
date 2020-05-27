@@ -51,6 +51,24 @@
   font-style: italic;
 }
 
+.gallery {
+  /* height: 400px; */
+  /* width: 600px; */
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery img {
+  /* position: absolute; */
+  /* height: 400px; */
+  /* width: 600px; */
+  /* left: 600px; */
+}
+
+.gallery img:nth-child(1) {
+  left: 0;
+}
+
 fieldset {
   border-radius: 4px;
   -moz-border-radius: 4px;
