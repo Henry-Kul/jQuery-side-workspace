@@ -1,21 +1,18 @@
 $(function () {
-  var galleryItems = $(".gallery").find("img");
-  galleryItems.css("width", "33%").css("opacity", "0.7");
-
-  galleryItems.mouseenter(function () {
-    $(this).stop().fadeTo(500, 1);
-  });
-  galleryItems.mouseleave(function () {
-    $(this).stop().fadeTo(500, 0.7);
+  $("html").keydown(function (event) {
+    console.log(event.which);
   });
 
-  galleryItems.click(function () {
-    var source = $(this).attr("src");
-    var image = $("<img>").attr("src", source).css("width", "100%");
-    $(".lightbox").empty().append(image).fadeIn(2000);
+  var ARROW_RIGHT = 39;
+  $("html").keydown(function (event) {
+    if (event.which === ARROW_RIGHT) {
+      $(".blue-box").stop().animate(
+        {
+          marginLeft: "+=10px",
+        },
+        50
+      );
+    }
   });
-
-  $(".lightbox").click(function() {
-      $(this).stop().fadeOut();
-  })
 });
+// key39 is right arrow key on keyboard
